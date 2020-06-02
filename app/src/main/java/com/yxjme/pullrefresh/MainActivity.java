@@ -26,75 +26,32 @@ import com.scwang.smartrefresh.layout.header.ClassicsHeader;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
 import com.scwang.smartrefresh.layout.listener.OnMultiPurposeListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
+import com.scwang.smartrefresh.layout.util.StatusBarUtil;
+import com.scwang.smartrefresh.layout.widget.SmartRefreshHorizontal;
 
 public class MainActivity extends AppCompatActivity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        StatusBarUtil.immersive(this);
+
+
+        SmartRefreshHorizontal smartRefreshHorizontal = findViewById(R.id.smartRefreshHorizontal);
+//        smartRefreshHorizontal.setRefreshHeader(null);
+        smartRefreshHorizontal.setRefreshFooter(new ClassicsFooter(this));
+        smartRefreshHorizontal.setHeaderMaxDragRate(0f);
+
+
         //下面示例中的值等于默认值
         SmartRefreshLayout refreshLayout = findViewById(R.id.refreshLayout);
         refreshLayout.setRefreshHeader(new ClassicsHeader(this));//设置Header
         refreshLayout.setRefreshFooter(new ClassicsFooter(this));//设置Footer
         refreshLayout.autoRefresh();//自动刷新
         refreshLayout.setEnablePureScrollMode(false);//是否启用纯滚动模式
-        refreshLayout.setOnMultiPurposeListener(new OnMultiPurposeListener() {
-            @Override
-            public void onHeaderMoving(RefreshHeader header, boolean isDragging, float percent, int offset, int headerHeight, int maxDragHeight) {
-
-            }
-
-            @Override
-            public void onHeaderReleased(RefreshHeader header, int headerHeight, int maxDragHeight) {
-
-            }
-
-            @Override
-            public void onHeaderStartAnimator(RefreshHeader header, int headerHeight, int maxDragHeight) {
-
-            }
-
-            @Override
-            public void onHeaderFinish(RefreshHeader header, boolean success) {
-
-            }
-
-            @Override
-            public void onFooterMoving(RefreshFooter footer, boolean isDragging, float percent, int offset, int footerHeight, int maxDragHeight) {
-
-            }
-
-            @Override
-            public void onFooterReleased(RefreshFooter footer, int footerHeight, int maxDragHeight) {
-
-            }
-
-            @Override
-            public void onFooterStartAnimator(RefreshFooter footer, int footerHeight, int maxDragHeight) {
-
-            }
-
-            @Override
-            public void onFooterFinish(RefreshFooter footer, boolean success) {
-
-            }
-
-            @Override
-            public void onLoadMore(@NonNull RefreshLayout refreshLayout) {
-
-            }
-
-            @Override
-            public void onRefresh(@NonNull RefreshLayout refreshLayout) {
-
-            }
-
-            @Override
-            public void onStateChanged(@NonNull RefreshLayout refreshLayout, @NonNull RefreshState oldState, @NonNull RefreshState newState) {
-
-            }
-        });
         refreshLayout.setOnRefreshListener(new OnRefreshListener() {
             @Override
             public void onRefresh(@NonNull final RefreshLayout refreshLayout) {

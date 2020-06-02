@@ -5,7 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".MainActivity"
-    android:overScrollMode="never">
+    android:overScrollMode="never"
+    android:orientation="vertical">
+
+
+    <com.scwang.smartrefresh.layout.widget.SmartRefreshHorizontal
+        android:id="@+id/smartRefreshHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <TimePicker
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.scwang.smartrefresh.layout.widget.SmartRefreshHorizontal>
+
 
     <com.scwang.smartrefresh.layout.SmartRefreshLayout
         android:id="@+id/refreshLayout"
