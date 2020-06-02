@@ -1,3 +1,6 @@
+文档地址
+https://github.com/scwang90/SmartRefreshLayout/blob/master/art/md_property.md#classicsheader
+
 public class RefreshActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -323,3 +326,131 @@ xml代码设置
         app:srlTextFailed="@string/srl_footer_failed"
         app:srlTextNothing="@string/srl_footer_nothing"/>
 </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+
+属性表格
+Attributes
+name 	format 	description
+srlPrimaryColor 	color 	主题颜色
+srlAccentColor 	color 	强调颜色
+srlReboundDuration 	integer 	释放后回弹动画时长（默认250毫秒）
+srlHeaderHeight 	dimension 	Header的标准高度（dp）
+srlFooterHeight 	dimension 	Footer的标准高度（dp）
+srlHeaderInsetStart 	dimension 	Header的起始偏移量（dp）V1.0.5
+srlFooterInsetStart 	dimension 	Footer的起始偏移量（dp）V1.0.5
+srlDragRate 	float 	显示拖动高度/真实拖动高度（默认0.5，阻尼效果）
+srlHeaderMaxDragRate 	float 	Header最大拖动高度/Header标准高度（默认2，要求>=1）
+srlFooterMaxDragRate 	float 	Footer最大拖动高度/Footer标准高度（默认2，要求>=1）
+srlHeaderTriggerRate 	float 	Header触发刷新距离 与 HeaderHeight 的比率（默认1）
+srlFooterTriggerRate 	float 	Footer触发加载距离 与 FooterHeight 的比率（默认1）
+srlEnableRefresh 	boolean 	是否开启下拉刷新功能（默认true）
+srlEnableLoadMore 	boolean 	是否开启加上拉加载功能（默认false-智能开启）
+srlEnableAutoLoadMore 	boolean 	是否监听列表惯性滚动到底部时触发加载事件（默认true）
+srlEnableHeaderTranslationContent 	boolean 	拖动Header的时候是否同时拖动内容（默认true）
+srlEnableFooterTranslationContent 	boolean 	拖动Footer的时候是否同时拖动内容（默认true）
+srlEnablePreviewInEditMode 	boolean 	是否在编辑模式时显示预览效果（默认true）
+srlEnablePureScrollMode 	boolean 	是否开启纯滚动模式（默认false-开启时只支持一个子视图）
+srlEnableOverScrollDrag 	boolean 	是否启用越界拖动（仿苹果效果）V1.0.4
+srlEnableOverScrollBounce 	boolean 	设置是否开启越界回弹功能（默认true）
+srlEnableNestedScrolling 	boolean 	是否开启嵌套滚动NestedScrolling(默认false-智能开启)
+srlEnableScrollContentWhenLoaded 	boolean 	是否在加载完成之后滚动内容显示新数据（默认-true）
+srlEnableScrollContentWhenRefreshed 	boolean 	是否在刷新成功之后滚动内容显示新数据（默认-true）
+srlEnableLoadMoreWhenContentNotFull 	boolean 	在内容不满一页的时候，是否可以上拉加载更多（默认-false）
+srlEnableFooterFollowWhenLoadFinished 	boolean 	是否在全部加载结束之后Footer跟随内容
+srlEnableClipHeaderWhenFixedBehind 	boolean 	是否剪裁Header当时样式为FixedBehind时V1.0.5
+srlEnableClipFooterWhenFixedBehind 	boolean 	是否剪裁Footer当时样式为FixedBehind时V1.0.5
+srlDisableContentWhenRefresh 	boolean 	是否在刷新的时候禁止内容的一切手势操作（默认false）
+srlDisableContentWhenLoading 	boolean 	是否在加载的时候禁止内容的一切手势操作（默认false）
+srlFixedHeaderViewId 	id 	指定固定顶部的视图Id
+srlFixedFooterViewId 	id 	指定固定底部的视图Id
+srlHeaderTranslationViewId 	id 	指定下拉Header时偏移的视图Id
+srlFooterTranslationViewId 	id 	指定上拉Footer时偏移的视图Id
+Method
+name 	format 	description
+setPrimaryColors 	colors 	主题\强调颜色
+setPrimaryColorsId 	colors 	主题\强调颜色资源Id
+setReboundDuration 	integer 	释放后回弹动画时长（默认250毫秒）
+setHeaderHeight 	dimension 	Header的标准高度（px/dp 两个版本）
+setFooterHeight 	dimension 	Footer的标准高度（px/dp 两个版本）
+setHeaderInsetStart 	dimension 	Header起始位置偏移量（px/dp 两个版本）V1.0.5
+setFooterInsetStart 	dimension 	Footer起始位置偏移量（px/dp 两个版本）V1.0.5
+setDragRate 	float 	显示拖动高度/真实拖动高度（默认0.5，阻尼效果）
+setHeaderMaxDragRate 	float 	Header最大拖动高度/Header标准高度（默认2，要求>=1）
+setFooterMaxDragRate 	float 	Footer最大拖动高度/Footer标准高度（默认2，要求>=1）
+setHeaderTriggerRate 	float 	Header触发刷新距离 与 HeaderHeight 的比率（默认1）
+setFooterTriggerRate 	float 	Footer触发加载距离 与 FooterHeight 的比率（默认1）
+setEnableRefresh 	boolean 	是否开启下拉刷新功能（默认true）
+setEnableLoadMore 	boolean 	是否开启加上拉加载功能（默认false-智能开启）
+setEnableHeaderTranslationContent 	boolean 	拖动Header的时候是否同时拖动内容（默认true）
+setEnableFooterTranslationContent 	boolean 	拖动Footer的时候是否同时拖动内容（默认true）
+setEnableAutoLoadMore 	boolean 	是否监听列表惯性滚动到底部时触发加载事件（默认true）
+setEnablePureScrollMode 	boolean 	是否开启纯滚动模式（默认false-开启时只支持一个子视图）
+setEnableOverScrollDrag 	boolean 	是否启用越界拖动（仿苹果效果）V1.0.4
+setEnableOverScrollBounce 	boolean 	设置是否开启越界回弹功能（默认true）
+setEnableNestedScrolling 	boolean 	是否开启嵌套滚动NestedScrolling（默认false-智能开启）
+setEnableScrollContentWhenLoaded 	boolean 	是否在加载完成之后滚动内容显示新数据（默认-true）
+setEnableScrollContentWhenRefreshed 	boolean 	是否在刷新成功之后滚动内容显示新数据（默认-true）V1.0.5
+setEnableLoadMoreWhenContentNotFull 	boolean 	在内容不满一页的时候，是否可以上拉加载更多（默认-false）
+setEnableFooterFollowWhenLoadFinished 	boolean 	是否在全部加载结束之后Footer跟随内容
+setEnableClipHeaderWhenFixedBehind 	boolean 	是否剪裁Header当时样式为FixedBehind时V1.0.5
+setEnableClipFooterWhenFixedBehind 	boolean 	是否剪裁Footer当时样式为FixedBehind时V1.0.5
+setDisableContentWhenRefresh 	boolean 	是否在刷新的时候禁止内容的一切手势操作（默认false）
+setDisableContentWhenLoading 	boolean 	是否在加载的时候禁止内容的一切手势操作（默认false）
+setReboundInterpolator 	Interpolator 	设置回弹动画的插值器（默认减速）
+setRefreshHeader 	RefreshHeader 	设置指定的Header（默认贝塞尔雷达）
+setRefreshFooter 	RefreshFooter 	设置指定的Footer（默认球脉冲）
+setRefreshContent 	View 	设置刷新Content（用于动态替换空布局）
+setOnRefreshListener 	OnRefreshListener 	设置刷新监听器（不设置，默认3秒后关刷新）
+setOnLoadMoreListener 	OnLoadMoreListener 	设置加载监听器（不设置，默认3秒后关加载）
+setOnRefreshLoadMoreListener 	OnRefreshLoadMoreListener 	同时设置上面两个监听器
+setOnMultiPurposeListener 	OnMultiPurposeListener 	设置多功能监听器
+setLoadMoreFinished 	boolean 	设置全部数据加载完成，之后不会触发加载事件
+setScrollBoundaryDecider 	boundary 	设置滚动边界判断
+finishRefresh 	(int delayed) 	完成刷新，结束刷新动画
+finishLoadMore 	(int delayed) 	完成加载，结束加载动画
+finishRefresh 	(boolean success) 	完成刷新，并设置是否成功
+finishLoadMore 	(boolean success) 	完成加载，并设置是否成功
+finishLoadMoreWithNoMoreData 		完成加载并标记没有更多数据(V1.0.4)
+closeHeaderOrFooter 		关闭 Header 或者 Footer（1.1.0）
+resetNoMoreData 		V1.0.4（V1.1.0删除，用 setNoMoreData(false) 代替）
+setNoMoreData 	boolean 	设置更多数据状态V1.0.5
+getRefreshHeader 	RefreshHeader 	获取Header
+getRefreshFooter 	RefreshFooter 	获取Footer
+getState 	RefreshState 	获取当前状态
+isRefreshing 	boolean 	(V1.1.0删除，版本用 getState==Refreshing 代替)
+isLoading 	boolean 	(V1.1.0删除，版本用 getState==Loading 代替)
+autoRefresh 	(int delayed) 	触发自动刷新
+autoLoadMore 	(int delayed) 	触发自动加载
+autoRefreshAnimationOnly 		触发自动刷新，只显示动画不执行刷新
+autoLoadMoreAnimationOnly 		触发自动加载，只显示动画不执行加载
+Header-Attributes
+name 	format 	description
+srlPrimaryColor 	color 	主题颜色
+srlAccentColor 	color 	强调颜色
+srlDrawableArrow 	drawable 	箭头图片
+srlDrawableProgress 	drawable 	转动图片
+srlClassicsSpinnerStyle 	enum 	变换样式：Translate(平行移动)、Scale（拉伸形变）、FixedBehind（固定在背后）
+srlSpinnerStyle 	enum 	变换样式：srlClassicsSpinnerStyle的全部、FixedFront（固定在前面或全屏）
+srlFinishDuration 	int 	动画结束时，显示完成状态停留的时间（毫秒）
+srlEnableLastTime 	boolean 	是否显示上次更新时间（默认true）
+srlDrawableMarginRight 	dimension 	图片相对右边文字的距离（默认20dp）
+srlTextTimeMarginTop 	dimension 	更新时间相对上面标题的距离（默认2dp）
+srlTextSizeTitle 	dimension 	标题文字大小（默认16sp）
+srlTextSizeTime 	dimension 	时间文字大小（默认12sp）
+Header-Method
+name 	format 	description
+setPrimaryColor 	color 	主题颜色
+setAccentColor 	color 	强调颜色
+setArrowDrawable 	drawable 	设置箭头图片
+setProgressDrawable 	drawable 	设置转动图片
+setArrowBitmap 	bitmap 	设置箭头图片(V1.1.0版本删除)
+setProgressBitmap 	bitmap 	设置转动图片(V1.1.0版本删除)
+setArrowResource 	int 	设置箭头图片
+setProgressResource 	int 	设置转动图片
+setSpinnerStyle 	enum 	变换样式：参考属性srlSpinnerStyle
+setClassicsSpinnerStyle 	enum 	变换样式：参考属性srlClassicsSpinnerStyle
+setFinishDuration 	int 	设置动画结束时，显示完成状态停留的时间（毫秒）
+setEnableLastTime 	boolean 	是否显示上次更新时间（默认true）
+setTextSizeTitle 	dimension 	标题文字大小（默认16sp）
+setTextSizeTime 	dimension 	时间文字大小（默认12sp）
+setLastUpdateText 	string 	手动设置更新时间，将不会自动更新时间
